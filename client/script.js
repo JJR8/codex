@@ -75,7 +75,7 @@ const handleSubmit = async (e) => {
 
   loader(messageDiv);
 
-  const resposne = await fetch('https://codex-xkg0.onrender.com', {
+  const resposne = await fetch('https://codex-qz5p.onrender.com/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
