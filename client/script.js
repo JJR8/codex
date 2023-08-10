@@ -75,7 +75,7 @@ const handleSubmit = async (e) => {
 
   loader(messageDiv);
 
-  const resposne = await fetch('https://codex-qz5p.onrender.com/', {
+  const response = await fetch('https://codex-qz5p.onrender.com/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
@@ -89,12 +89,12 @@ const handleSubmit = async (e) => {
   messageDiv.innerHTML = '';
 
   if(resposne.ok) {
-    const data = await resposne.json();
+    const data = await response.json();
     const parsedData = data.bot.trim();
 
     typeText(messageDiv, parsedData);
   } else {
-    const err = await resposne.text();
+    const err = await response.text();
 
     messageDiv.innerHTML = "Something went wrong";
 
