@@ -88,7 +88,7 @@ const handleSubmit = async (e) => {
   clearInterval(loadInterval);
   messageDiv.innerHTML = '';
 
-  if(resposne.ok) {
+  if(response.ok) {
     const data = await response.json();
     const parsedData = data.bot.trim();
 
